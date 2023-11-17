@@ -21,6 +21,9 @@ export default function Home() {
             <article key={ e.id }>
               <h2>{e.title}</h2>
               <img src={ e.image } alt={ e.title } />
+              <Link to={ `/Animation/${e.id}` }>
+                More
+              </Link>
               <label htmlFor={ e.id }>
                 {favFilms.some(({ id }) => id === e.id)
                   ? <i className="bi bi-heart-fill" />

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const GLOBAL_BG = styled.div`
   width: 100vw;
   height: 100vh;
-  overflow-y: auto;
-  
+  overflow-x: hidden;
 `;
 
 export const HEADER = styled.header`
@@ -39,15 +38,19 @@ export const MAIN = styled.main`
       grid-template-columns: repeat(auto-fill, 350px);
       gap: 20px;
       article{
+        text-decoration: none;
         position: relative;
         width: 100%;
-        height: 80vh;
+        height: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: 1s;
+        box-shadow: 3px 3px 10px black;
         &:hover {
+          transition: 1s;
+          box-shadow: none;
           h2{
             transition: 1s;
             color: white;
@@ -55,6 +58,12 @@ export const MAIN = styled.main`
           img{
             transition: 1s;
             filter: blur(3px) brightness(60%);
+          }
+          label{
+            color: white;
+          }
+          a{
+            color: white;
           }
         }
         h2{
@@ -67,13 +76,30 @@ export const MAIN = styled.main`
           right: 20px;
           bottom: 20px;
           transform: scale(200%);
-          color: #880000;
+          color: transparent;
           transition: 1s;          
           cursor: pointer;
         }
         label:hover{
           color: red;
+          filter: drop-shadow(0 0 0.75rem white);
           transition: 1s;          
+        }
+        a{
+          position: absolute;
+          left: 30px;
+          bottom: 25px;
+          text-decoration: none;
+          font-size: 1rem;
+          transform: scale(200%);
+          color: transparent;
+          transition: 1s;          
+          cursor: pointer;
+        }
+        a:hover{
+          color: #4c4cff;
+          transition: 1s;
+          filter: drop-shadow(0 0 0.75rem white);
         }
         button{
           border: none;
