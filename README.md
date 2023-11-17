@@ -1,0 +1,1 @@
+Projeto front end utilizando uma Api que armazena dados das Animações do estúdio Ghibli.
