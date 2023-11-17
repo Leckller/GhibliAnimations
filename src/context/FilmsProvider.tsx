@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import FilmsContext from './FilmsContext';
 import { FilmsType } from '../types';
+import Fetch from '../services/Fetch';
 
 function FilmsProvider({ children }: { children: React.ReactNode }) {
   const [films, setFilms] = useState<FilmsType[]>([]);
   const [favFilms, setFavFilms] = useState<FilmsType[]>([]);
   useEffect(() => {
     const effect = async () => {
-      const data = await fetch('https://api-trybe-frontend.vercel.app/api/ghibli-animations');
-      const response = await data.json();
+      const response = await Fetch();
       setFilms(response);
     };
     effect();
