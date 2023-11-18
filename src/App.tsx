@@ -9,6 +9,7 @@ function App() {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: #dce0e6;
   }
   body{
     overflow: hidden;

@@ -4,28 +4,42 @@ export const GLOBAL_BG = styled.div`
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background-color: #2b4c7e;
+  scroll-behavior: smooth;
 `;
 
 export const HEADER = styled.header`
-  width: 100vw;
+    width: 100vw;
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    box-shadow: 3px 3px 10px #1f1f20;
+    font-variant: small-caps;
     img{
       width: 100px;
-      transform: translateY(5px)
+      transform: translateY(5px) scale(90%);
     }
     nav{
       width: 100px;
       a{
-        color: black;
+        color: #dce0e6;
         font-size: 20px;
         text-decoration: none;
       }
     }
+`;
+
+export const UP = styled.a`
+  position: absolute;
+  right: 35px;
+  top: 30px;
+  padding: 18px 20px;
+  border-radius: 9999px;
+  box-shadow: 3px 3px 10px #1f1f20;
+  z-index: 1;
 `;
 
 export const MAIN = styled.main`
@@ -70,6 +84,7 @@ export const MAIN = styled.main`
           transition: 1s;
           color: transparent;
           width: 80%;
+          z-index: 2;
         }
         label{
           position: absolute;
@@ -110,7 +125,6 @@ export const MAIN = styled.main`
           transition: 1s;
           width: 100%;
           height: 100%;
-          z-index: -1;
         }
       }
     }
