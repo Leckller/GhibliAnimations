@@ -33,12 +33,10 @@ function Header() {
           </Link>
         </nav>
       </HEADER>
-      {bg?.scrollTop > 100 && (
-        <UP href="#header">
-          {' '}
-          <i className="bi bi-arrow-up" />
-        </UP>
-      )}
+      <UP href="#header">
+        {' '}
+        <i className="bi bi-arrow-up" />
+      </UP>
     </>
   );
 }
