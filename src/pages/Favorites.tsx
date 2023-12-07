@@ -1,21 +1,15 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import FilmsContext from '../context/FilmsContext';
-import { GLOBAL_BG } from '../styles';
+import { GLOBAL_BG, MAIN } from '../styles';
+import Header from '../components/Header';
 
 export default function Favorites() {
   const { favFilms, togleFilms } = useContext(FilmsContext);
   return (
-    <GLOBAL_BG>
-      <header>
-        <img src="/src/assets/totoro.png" alt="" />
-        <h1>Films</h1>
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
-      </header>
-      <main>
+    <GLOBAL_BG id="globalBg">
+      <Header />
+      <MAIN>
         <section>
           {favFilms && favFilms.map((e) => (
             <article key={ e.id }>
@@ -33,7 +27,7 @@ export default function Favorites() {
             </article>
           ))}
         </section>
-      </main>
+      </MAIN>
     </GLOBAL_BG>
   );
 }
