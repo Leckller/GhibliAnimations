@@ -15,8 +15,6 @@ function Header() {
   }, [eye]);
   const loc = useLocation().pathname;
   const path = '/favorites';
-  const bg = document.querySelector('#globalBg');
-  console.log(bg?.scrollTop);
   return (
     <>
       <HEADER id="header">

@@ -9,6 +9,7 @@ function FilmsProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const effect = async () => {
       const response = await Fetch();
+      console.log(response);
       setFilms(response);
     };
     effect();
